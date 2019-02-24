@@ -7,7 +7,7 @@ target 'Pop' do
 
   # Pods for Pop
 
-
+	pod 'FirebaseUI'
 	pod 'Firebase/Core'
 	pod 'Firebase/Database'
 	pod 'Firebase/Auth'
