@@ -7,6 +7,7 @@ target 'Pop' do
 
   # Pods for Pop
 
+	pod 'SwiftKeychainWrapper'	
 	pod 'FirebaseUI'
 	pod 'Firebase/Core'
 	pod 'Firebase/Database'
