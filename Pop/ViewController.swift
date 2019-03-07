@@ -21,15 +21,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-       
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.standard.string(forKey: "KEY_UID"){
+            self.performSegue(withIdentifier: "toFeed", sender: nil)
+        }
+    }
 
     @IBAction func loginButton(_ sender: Any) {
         if let email = usernameBox.text, let password = passwordBox.text{
             Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-                if error != nil {
-                    //create account
+                if error != nil && ((self.usernameBox.text?.isEmpty)!){
+                    //creating user type shiiii
+                Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                    }
                 }
                 else {
                    KeychainWrapper.standard.set((user?.user.uid)!, forKey: "KEY_UID")
