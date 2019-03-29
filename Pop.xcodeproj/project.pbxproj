@@ -79,6 +79,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3BEEB82D224D036A005EB920 /* SignUpScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3BF370D922373A1E004BA674 /* SignUpScreen.swift */,
+				3B14ED7F22369B0600C9BBA3 /* Sign Up Screen.storyboard */,
+			);
+			path = SignUpScreen;
+			sourceTree = "<group>";
+		};
+		3BEEB82E224D03D2005EB920 /* Login Page */ = {
+			isa = PBXGroup;
+			children = (
+				A4394237222330F200FFD820 /* ViewController.swift */,
+				A4394239222330F200FFD820 /* Main.storyboard */,
+			);
+			path = "Login Page";
+			sourceTree = "<group>";
+		};
 		592A029838028F024FADC61F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,12 +130,10 @@
 			isa = PBXGroup;
 			children = (
 				A4394235222330F200FFD820 /* AppDelegate.swift */,
-				A4394237222330F200FFD820 /* ViewController.swift */,
-				3BF370D922373A1E004BA674 /* SignUpScreen.swift */,
-				A4394239222330F200FFD820 /* Main.storyboard */,
-				3B14ED7F22369B0600C9BBA3 /* Sign Up Screen.storyboard */,
-				A439423C222330F300FFD820 /* Assets.xcassets */,
+				3BEEB82E224D03D2005EB920 /* Login Page */,
+				3BEEB82D224D036A005EB920 /* SignUpScreen */,
 				A439423E222330F300FFD820 /* LaunchScreen.storyboard */,
+				A439423C222330F300FFD820 /* Assets.xcassets */,
 				A43942632223337000FFD820 /* GoogleService-Info.plist */,
 				A4394241222330F300FFD820 /* Info.plist */,
 			);

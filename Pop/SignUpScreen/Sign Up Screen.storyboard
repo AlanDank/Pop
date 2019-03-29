@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sign Up Screen-->
         <scene sceneID="XGJ-7U-gkW">
             <objects>
-                <viewController id="jwi-4J-zne" sceneMemberID="viewController">
+                <viewController id="jwi-4J-zne" customClass="SignUpScreen" customModule="Pop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PJw-tl-aMf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,6 +31,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="username"/>
+                                <connections>
+                                    <action selector="UsernameField:" destination="KUP-rk-pSX" eventType="editingDidEnd" id="LFo-ku-jgv"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="64n-Ou-ZAX">
                                 <rect key="frame" x="32" y="359" width="310" height="30"/>
@@ -87,6 +90,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k2J-BC-2En" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="KUP-rk-pSX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="77.599999999999994" y="62.518740629685162"/>
         </scene>
