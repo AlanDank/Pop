@@ -20,6 +20,7 @@
 		A4749D1B225A8601004F40FF /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4749D1A225A8601004F40FF /* Upload.swift */; };
 		A4749D1D225A8621004F40FF /* UploadPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4749D1C225A8621004F40FF /* UploadPage.storyboard */; };
 		A4749D20225A99FB004F40FF /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4749D1F225A99FB004F40FF /* Settings.swift */; };
+		A4749D22225A9A43004F40FF /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4749D21225A9A43004F40FF /* Settings.storyboard */; };
 		B83131F4ACC9DC686177988C /* Pods_Pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ACAC30949E5F4483CAC40BB /* Pods_Pop.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		A4749D1A225A8601004F40FF /* Upload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Upload.swift; sourceTree = "<group>"; };
 		A4749D1C225A8621004F40FF /* UploadPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UploadPage.storyboard; sourceTree = "<group>"; };
 		A4749D1F225A99FB004F40FF /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		A4749D21225A9A43004F40FF /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		D8AE9EC51CCA044C9D7E0EC4 /* Pods-Pop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pop.release.xcconfig"; path = "Target Support Files/Pods-Pop/Pods-Pop.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,8 +150,8 @@
 		A4394234222330F200FFD820 /* Pop */ = {
 			isa = PBXGroup;
 			children = (
-				A4749D1E225A99B1004F40FF /* Settings */,
 				A4394235222330F200FFD820 /* AppDelegate.swift */,
+				A4749D1E225A99B1004F40FF /* Settings */,
 				3BEE48C1225A978500549CD6 /* Feed */,
 				3BEEB82E224D03D2005EB920 /* Login Page */,
 				3BEEB82D224D036A005EB920 /* SignUpScreen */,
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				A4749D1F225A99FB004F40FF /* Settings.swift */,
+				A4749D21225A9A43004F40FF /* Settings.storyboard */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				3BEE48C5225A99A600549CD6 /* Feed.storyboard in Resources */,
 				3B14ED8022369B0600C9BBA3 /* Sign Up Screen.storyboard in Resources */,
 				A439423D222330F300FFD820 /* Assets.xcassets in Resources */,
+				A4749D22225A9A43004F40FF /* Settings.storyboard in Resources */,
 				A439423B222330F200FFD820 /* Main.storyboard in Resources */,
 				A4749D1D225A8621004F40FF /* UploadPage.storyboard in Resources */,
 			);
