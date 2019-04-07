@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     @IBAction func loginButton(_ sender: Any) {
         if let email = usernameBox.text, let password = passwordBox.text{
             Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-                if error != nil && ((self.usernameBox.text?.isEmpty)!){
+                if error == nil && ((self.usernameBox.text?.isEmpty)!){
                    
                     
                     KeychainWrapper.standard.set((user?.user.uid)!, forKey: "KEY_UID")
