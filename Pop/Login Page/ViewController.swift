@@ -12,7 +12,7 @@ import Firebase
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var usernameBox: UITextField!
+    @IBOutlet weak var emailBox: UITextField!
     
     @IBOutlet weak var passwordBox: UITextField!
     
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loginButton(_ sender: Any) {
-        if let email = usernameBox.text, let password = passwordBox.text{
+        if let email = emailBox.text, let password = passwordBox.text{
             Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
                 if error == nil{
                    
