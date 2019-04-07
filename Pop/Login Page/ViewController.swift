@@ -33,18 +33,16 @@ class ViewController: UIViewController {
         if let email = usernameBox.text, let password = passwordBox.text{
             Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
                 if error != nil && ((self.usernameBox.text?.isEmpty)!){
-                    //creating user type shiiii
-                Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-                    }
-                }
-                else {
-                   KeychainWrapper.standard.set((user?.user.uid)!, forKey: "KEY_UID")
+                   
+                    
+                    KeychainWrapper.standard.set((user?.user.uid)!, forKey: "KEY_UID")
                     self.performSegue(withIdentifier: "toFeed", sender: nil)
+                    
+                   }
                 }
-            
             }
         }
     }
     
-}
+
 
