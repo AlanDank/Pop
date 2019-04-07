@@ -92,8 +92,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="emailBox" destination="Gl8-1z-VxK" id="1JU-YI-ftd"/>
                         <outlet property="passwordBox" destination="jcs-mB-9to" id="0rN-Kx-sCn"/>
-                        <outlet property="usernameBox" destination="Gl8-1z-VxK" id="YcD-vq-Zdm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
