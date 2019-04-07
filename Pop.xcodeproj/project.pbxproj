@@ -19,6 +19,8 @@
 		A43942642223337000FFD820 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A43942632223337000FFD820 /* GoogleService-Info.plist */; };
 		A4749D1B225A8601004F40FF /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4749D1A225A8601004F40FF /* Upload.swift */; };
 		A4749D1D225A8621004F40FF /* UploadPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4749D1C225A8621004F40FF /* UploadPage.storyboard */; };
+		A4749D20225A99FB004F40FF /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4749D1F225A99FB004F40FF /* Settings.swift */; };
+		A4749D22225A9A43004F40FF /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4749D21225A9A43004F40FF /* Settings.storyboard */; };
 		B83131F4ACC9DC686177988C /* Pods_Pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ACAC30949E5F4483CAC40BB /* Pods_Pop.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,8 @@
 		A43942632223337000FFD820 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A4749D1A225A8601004F40FF /* Upload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Upload.swift; sourceTree = "<group>"; };
 		A4749D1C225A8621004F40FF /* UploadPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UploadPage.storyboard; sourceTree = "<group>"; };
+		A4749D1F225A99FB004F40FF /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		A4749D21225A9A43004F40FF /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		D8AE9EC51CCA044C9D7E0EC4 /* Pods-Pop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pop.release.xcconfig"; path = "Target Support Files/Pods-Pop/Pods-Pop.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				A4394235222330F200FFD820 /* AppDelegate.swift */,
+				A4749D1E225A99B1004F40FF /* Settings */,
 				3BEE48C1225A978500549CD6 /* Feed */,
 				3BEEB82E224D03D2005EB920 /* Login Page */,
 				3BEEB82D224D036A005EB920 /* SignUpScreen */,
@@ -166,6 +171,15 @@
 				A4749D1A225A8601004F40FF /* Upload.swift */,
 			);
 			path = "Upload Page";
+			sourceTree = "<group>";
+		};
+		A4749D1E225A99B1004F40FF /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A4749D1F225A99FB004F40FF /* Settings.swift */,
+				A4749D21225A9A43004F40FF /* Settings.storyboard */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		ED544F76B269FEE527CBF140 /* Frameworks */ = {
@@ -288,6 +302,7 @@
 				3BEE48C5225A99A600549CD6 /* Feed.storyboard in Resources */,
 				3B14ED8022369B0600C9BBA3 /* Sign Up Screen.storyboard in Resources */,
 				A439423D222330F300FFD820 /* Assets.xcassets in Resources */,
+				A4749D22225A9A43004F40FF /* Settings.storyboard in Resources */,
 				A439423B222330F200FFD820 /* Main.storyboard in Resources */,
 				A4749D1D225A8621004F40FF /* UploadPage.storyboard in Resources */,
 			);
@@ -434,6 +449,7 @@
 				3BEE48C3225A98DF00549CD6 /* Feed.swift in Sources */,
 				A4394236222330F200FFD820 /* AppDelegate.swift in Sources */,
 				3BE947A822563F2900C0F3EC /* SignUpScreen.swift in Sources */,
+				A4749D20225A99FB004F40FF /* Settings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
