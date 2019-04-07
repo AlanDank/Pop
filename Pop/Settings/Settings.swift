@@ -17,6 +17,9 @@ class Settings: UIViewController {
     }
     
 
+    @IBAction func Logout(_ sender: Any) {
+        self.performSegue(withIdentifier: "toLogin", sender: nil)
+    }
     /*
     // MARK: - Navigation
 
