@@ -9,12 +9,18 @@
 /* Begin PBXBuildFile section */
 		3B14ED8022369B0600C9BBA3 /* Sign Up Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B14ED7F22369B0600C9BBA3 /* Sign Up Screen.storyboard */; };
 		3BE947A822563F2900C0F3EC /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE947A722563F2900C0F3EC /* SignUpScreen.swift */; };
+		3BEE48C3225A98DF00549CD6 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE48C2225A98DF00549CD6 /* Feed.swift */; };
+		3BEE48C5225A99A600549CD6 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEE48C4225A99A600549CD6 /* Feed.storyboard */; };
 		A4394236222330F200FFD820 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4394235222330F200FFD820 /* AppDelegate.swift */; };
 		A4394238222330F200FFD820 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4394237222330F200FFD820 /* ViewController.swift */; };
 		A439423B222330F200FFD820 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4394239222330F200FFD820 /* Main.storyboard */; };
 		A439423D222330F300FFD820 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A439423C222330F300FFD820 /* Assets.xcassets */; };
 		A4394240222330F300FFD820 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A439423E222330F300FFD820 /* LaunchScreen.storyboard */; };
 		A43942642223337000FFD820 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A43942632223337000FFD820 /* GoogleService-Info.plist */; };
+		A4749D1B225A8601004F40FF /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4749D1A225A8601004F40FF /* Upload.swift */; };
+		A4749D1D225A8621004F40FF /* UploadPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4749D1C225A8621004F40FF /* UploadPage.storyboard */; };
+		A4749D20225A99FB004F40FF /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4749D1F225A99FB004F40FF /* Settings.swift */; };
+		A4749D22225A9A43004F40FF /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4749D21225A9A43004F40FF /* Settings.storyboard */; };
 		B83131F4ACC9DC686177988C /* Pods_Pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ACAC30949E5F4483CAC40BB /* Pods_Pop.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +45,8 @@
 		26075560F4AF914551721A77 /* Pods-Pop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pop.debug.xcconfig"; path = "Target Support Files/Pods-Pop/Pods-Pop.debug.xcconfig"; sourceTree = "<group>"; };
 		3B14ED7F22369B0600C9BBA3 /* Sign Up Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Sign Up Screen.storyboard"; sourceTree = "<group>"; };
 		3BE947A722563F2900C0F3EC /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
+		3BEE48C2225A98DF00549CD6 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		3BEE48C4225A99A600549CD6 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		8ACAC30949E5F4483CAC40BB /* Pods_Pop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4394232222330F200FFD820 /* Pop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4394235222330F200FFD820 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +58,10 @@
 		A4394246222330F300FFD820 /* PopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4394251222330F300FFD820 /* PopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A43942632223337000FFD820 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A4749D1A225A8601004F40FF /* Upload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Upload.swift; sourceTree = "<group>"; };
+		A4749D1C225A8621004F40FF /* UploadPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UploadPage.storyboard; sourceTree = "<group>"; };
+		A4749D1F225A99FB004F40FF /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		A4749D21225A9A43004F40FF /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		D8AE9EC51CCA044C9D7E0EC4 /* Pods-Pop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pop.release.xcconfig"; path = "Target Support Files/Pods-Pop/Pods-Pop.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +91,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3BEE48C1225A978500549CD6 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				3BEE48C4225A99A600549CD6 /* Feed.storyboard */,
+				3BEE48C2225A98DF00549CD6 /* Feed.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
 		3BEEB82D224D036A005EB920 /* SignUpScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,14 +151,35 @@
 			isa = PBXGroup;
 			children = (
 				A4394235222330F200FFD820 /* AppDelegate.swift */,
+				A4749D1E225A99B1004F40FF /* Settings */,
+				3BEE48C1225A978500549CD6 /* Feed */,
 				3BEEB82E224D03D2005EB920 /* Login Page */,
 				3BEEB82D224D036A005EB920 /* SignUpScreen */,
+				A4749D19225A8552004F40FF /* Upload Page */,
 				A439423E222330F300FFD820 /* LaunchScreen.storyboard */,
 				A439423C222330F300FFD820 /* Assets.xcassets */,
 				A43942632223337000FFD820 /* GoogleService-Info.plist */,
 				A4394241222330F300FFD820 /* Info.plist */,
 			);
 			path = Pop;
+			sourceTree = "<group>";
+		};
+		A4749D19225A8552004F40FF /* Upload Page */ = {
+			isa = PBXGroup;
+			children = (
+				A4749D1C225A8621004F40FF /* UploadPage.storyboard */,
+				A4749D1A225A8601004F40FF /* Upload.swift */,
+			);
+			path = "Upload Page";
+			sourceTree = "<group>";
+		};
+		A4749D1E225A99B1004F40FF /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A4749D1F225A99FB004F40FF /* Settings.swift */,
+				A4749D21225A9A43004F40FF /* Settings.storyboard */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		ED544F76B269FEE527CBF140 /* Frameworks */ = {
@@ -257,9 +299,12 @@
 			files = (
 				A4394240222330F300FFD820 /* LaunchScreen.storyboard in Resources */,
 				A43942642223337000FFD820 /* GoogleService-Info.plist in Resources */,
+				3BEE48C5225A99A600549CD6 /* Feed.storyboard in Resources */,
 				3B14ED8022369B0600C9BBA3 /* Sign Up Screen.storyboard in Resources */,
 				A439423D222330F300FFD820 /* Assets.xcassets in Resources */,
+				A4749D22225A9A43004F40FF /* Settings.storyboard in Resources */,
 				A439423B222330F200FFD820 /* Main.storyboard in Resources */,
+				A4749D1D225A8621004F40FF /* UploadPage.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,9 +444,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4749D1B225A8601004F40FF /* Upload.swift in Sources */,
 				A4394238222330F200FFD820 /* ViewController.swift in Sources */,
+				3BEE48C3225A98DF00549CD6 /* Feed.swift in Sources */,
 				A4394236222330F200FFD820 /* AppDelegate.swift in Sources */,
 				3BE947A822563F2900C0F3EC /* SignUpScreen.swift in Sources */,
+				A4749D20225A99FB004F40FF /* Settings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,7 +624,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 86ZG2GDGT6;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Pop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -595,7 +643,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 86ZG2GDGT6;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Pop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
