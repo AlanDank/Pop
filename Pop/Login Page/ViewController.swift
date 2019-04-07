@@ -12,7 +12,7 @@ import Firebase
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var usernameBox: UITextField!
+    @IBOutlet weak var emailBox: UITextField!
     
     @IBOutlet weak var passwordBox: UITextField!
     
@@ -24,24 +24,31 @@ class ViewController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        if let _ = KeychainWrapper.standard.string(forKey: "KEY_UID"){
+        if let _ = KeychainWrapper.standard.string(forKey: "uid"){
             self.performSegue(withIdentifier: "toFeed", sender: nil)
         }
     }
-
+    
     @IBAction func loginButton(_ sender: Any) {
-        if let email = usernameBox.text, let password = passwordBox.text{
+        if let email = emailBox.text, let password = passwordBox.text{
             Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-                if error == nil && ((self.usernameBox.text?.isEmpty)!){
+                if error == nil{
                    
-                    
-                    KeychainWrapper.standard.set((user?.user.uid)!, forKey: "KEY_UID")
+                    if let userID = user?.user.uid {
+                    KeychainWrapper.standard.set((userID), forKey: "uid")
                     self.performSegue(withIdentifier: "toFeed", sender: nil)
-                    
+                        
+                     }
                    }
                 }
             }
         }
+    
+    
+    @IBAction func signupButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "toStoryboard", sender: nil)
+    }
+    
     }
     
 

@@ -1,30 +1,24 @@
 //
-//  SignUpScreen.swift
+//  FeedViewController.swift
 //  Pop
 //
-//  Created by Mason McCord on 4/4/19.
+//  Created by Mason McCord on 4/7/19.
 //  Copyright © 2019 Alan Dang. All rights reserved.
 //
 
 import UIKit
-import Firebase
-import SwiftKeychainWrapper
 
-class SignUpScreen: UIViewController {
-    
-    
-    @IBOutlet weak var usernameField: UITextField!
-    
-    @IBOutlet weak var passwordField: UITextField!
-    
-    @IBOutlet weak var emailField: UITextField!
-    
+class FeedViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
+    @IBAction func settingButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "toSettings", sender: nil)
+        
+    }
 
     /*
     // MARK: - Navigation
