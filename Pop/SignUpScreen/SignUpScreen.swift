@@ -24,7 +24,11 @@ class SignUpScreen: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
+      if let email = emailField.text, let password = passwordField.text{
+    Auth.auth().signIn(withEmail: email, password: password) { [weak self] user, error in
+  guard let strongSelf = self else { return }
+  // ...}
+}
 
     /*
     // MARK: - Navigation
