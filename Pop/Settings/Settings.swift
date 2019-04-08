@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import SwiftKeychainWrapper
 
 class Settings: UIViewController {
 
@@ -18,6 +20,11 @@ class Settings: UIViewController {
     
 
     @IBAction func Logout(_ sender: Any) {
+        KeychainWrapper.standard.removeObject(forKey: "uid"); do {
+            try Auth.auth().signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
         self.performSegue(withIdentifier: "toLogin", sender: nil)
     }
     /*
