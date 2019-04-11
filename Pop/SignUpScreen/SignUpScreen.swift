@@ -19,25 +19,55 @@ class SignUpScreen: UIViewController {
     
     @IBOutlet weak var emailField: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-      if let email = emailField.text, let password = passwordField.text{
-    Auth.auth().signIn(withEmail: email, password: password) { [weak self] user, error in
-  guard let strongSelf = self else { return }
-  // ...}
 }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+@objc func handleSignUp() {
+    guard let username = usernameField.text else { return }
+    guard let email = emailField.text else { return }
+    guard let password = passwordField.text else { return }
+    
+    Auth.auth().createUser(withEmail: email, password: password) { user, error in 
+                                                                  
+     if error == nil && user != nil {
+         
+         print("User Created!")
+         
+         let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+         changeRequest?.displayName = username
+         changeRequest?.comitChanges { error in 
+                                      
+         if error == nil {
+             
+             print("User displayname changed!")
+             
+             
+         }
+                                      
+                                      
+                                      
+     }
+}
+                                                                  
+     else {
+         
+         print("Error creating user: \(error!.localizedDescription!")
+         
+     }
+         
+         
+     }
+                                                                  
+                                                                 
+                                                                 
+                                                                 
+                                                                 
+                                                                 
+                                                                 
+ 
+                                                                 
+                                                                 
+                                                                 
+                                                                 
+                                                                 
 }
