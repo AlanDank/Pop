@@ -40,6 +40,7 @@ class SignUpScreen: UIViewController {
          if error == nil {
              
              print("User displayname changed!")
+             self.dismiss(animated: false, completion: nil)
              
              
          }
