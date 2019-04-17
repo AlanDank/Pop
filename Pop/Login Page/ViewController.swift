@@ -30,19 +30,23 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loginButton(_ sender: Any) {
-        if let email = emailBox.text, let password = passwordBox.text{
-            Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-                if error == nil{
-                   
+        
+        guard let email = emailBox.text else {return}
+        guard let password = passwordBox.text else {return}
+        
+            Auth.auth().signIn(withEmail: email, password: password) { [weak self] (user, error) in
+                guard let strongSelf = self else { return }
+                if error == nil && user != nil {
+                    
                     if let userID = user?.user.uid {
-                    KeychainWrapper.standard.set((userID), forKey: "uid")
-                    self.performSegue(withIdentifier: "toFeed", sender: nil)
+                        KeychainWrapper.standard.set((userID), forKey: "uid")
+                        self?.performSegue(withIdentifier: "toFeed", sender: nil)                }
                         
-                     }
+                     
                    }
                 }
             }
-        }
+    
     
     
     @IBAction func signupButton(_ sender: Any) {

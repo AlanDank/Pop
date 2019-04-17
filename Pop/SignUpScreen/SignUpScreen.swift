@@ -32,20 +32,7 @@ class SignUpScreen: UIViewController {
     }
     
     
-    @IBAction func signUpButton(_ sender: Any) {
-        if let email = emailField.text, let password = passwordField.text{
-            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-                
-                self.storeUserData(userId: (user?.uid)!)
-                    
-                    
-                    )
-            }
-            
-        }
-    
-    }
-    // ...}
+ 
 }
 
     /*
