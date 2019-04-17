@@ -30,15 +30,17 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loginButton(_ sender: Any) {
-        if let email = emailBox.text, let password = passwordBox.text{
+       
+        if let email = emailBox.text,
+            let password = passwordBox.text{
+        
             Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-                if error == nil{
-                   
-                    if let userID = user?.user.uid {
-                    KeychainWrapper.standard.set((userID), forKey: "uid")
-                    self.performSegue(withIdentifier: "toFeed", sender: nil)
-                        
-                     }
+                if error == nil && user != nil {
+                    print ("User Signed In")
+                }
+                    else {
+                    print ("Error Signing In: \(error!.localizedDescription)" )
+                    
                    }
                 }
             }

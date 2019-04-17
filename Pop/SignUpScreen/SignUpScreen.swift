@@ -22,42 +22,44 @@ class SignUpScreen: UIViewController {
 
 }
 
-@objc func handleSignUp() {
+
+func handleSignUp() {
+    
     guard let username = usernameField.text else { return }
     guard let email = emailField.text else { return }
     guard let password = passwordField.text else { return }
     
-    Auth.auth().createUser(withEmail: email, password: password) { user, error in 
-                                                                  
-     if error == nil && user != nil {
-         
-         print("User Created!")
-         
-         let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-         changeRequest?.displayName = username
-         changeRequest?.comitChanges { error in 
-                                      
-         if error == nil {
-             
-             print("User displayname changed!")
-             self.dismiss(animated: false, completion: nil)
-             
-             
-         }
-                                      
-                                      
-                                      
-     }
+  Auth.auth().createUser(withEmail: email, password: password) { user, error in
+        
+        if error == nil && user != nil {
+            
+            print("User Created!")
+            
+            let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+            changeRequest?.displayName = username
+            changeRequest?.comitChanges { error in
+                
+                if error == nil {
+                    
+                    print("User displayname changed!")
+                    self.dismiss(animated: false, completion: nil)
+                    
+                    
+                }
+                
+                
+                
+            }
+        }
+            
+        else {
+            
+            print("Error creating user: \(error!.localizedDescription!)")
+        }
+            
 }
-                                                                  
-     else {
          
-         print("Error creating user: \(error!.localizedDescription!")
-         
-     }
-         
-         
-     }
+}
                                                                   
                                                                  
                                                                  
@@ -71,4 +73,4 @@ class SignUpScreen: UIViewController {
                                                                  
                                                                  
                                                                  
-}
+
