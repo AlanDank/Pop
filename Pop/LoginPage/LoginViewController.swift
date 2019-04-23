@@ -53,4 +53,7 @@ class LoginViewController:UIViewController, UITextFieldDelegate {
         
         self.perform(#selector(handleSignIn), with: self)
     }
+    @IBAction func cancelButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }

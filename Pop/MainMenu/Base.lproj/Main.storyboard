@@ -116,6 +116,19 @@
                                     <action selector="continueLogin:" destination="uOZ-Sm-S8n" eventType="touchUpInside" id="LXj-I8-0we"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqx-mi-S8H">
+                                <rect key="frame" x="1" y="34" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="8TA-Uz-x0g">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="z9M-8F-i0v">
+                                            <connections>
+                                                <action selector="cancelButton:" destination="uOZ-Sm-S8n" id="bjw-H3-LZI"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="EyU-dQ-tAe"/>
@@ -204,6 +217,19 @@
                                     <action selector="continueButton:" destination="dv1-gH-Fg5" eventType="touchUpInside" id="CPa-7O-qUD"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mga-uO-ard">
+                                <rect key="frame" x="0.0" y="27" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="6xY-Fw-6cR">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="M0V-TM-JL0">
+                                            <connections>
+                                                <action selector="cancelButton:" destination="dv1-gH-Fg5" id="aL4-B6-gMn"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="aib-pM-sQq"/>

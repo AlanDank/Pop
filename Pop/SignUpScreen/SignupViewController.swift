@@ -29,6 +29,9 @@ override func viewDidLoad() {
     }
     
     
+    @IBAction func cancelButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBAction func continueButton(_ sender: Any) {
         self.perform(#selector(handleSignup), with: self)
 
