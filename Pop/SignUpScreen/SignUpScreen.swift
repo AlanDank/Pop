@@ -5,10 +5,10 @@
 //  Created by Mason McCord on 4/4/19.
 //  Copyright © 2019 Alan Dang. All rights reserved.
 //
-
+import Foundation
 import UIKit
 import Firebase
-import SwiftKeychainWrapper
+
 
 class SignUpScreen: UIViewController {
     
@@ -25,15 +25,20 @@ class SignUpScreen: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func storeUserData (userId: String) {
-        
-        
-        
+    
     }
     
     
- 
+    @objc func handleSignUp() {
+    
+    
+    
+    
+    
+    
+    
 }
+
 
     /*
     // MARK: - Navigation

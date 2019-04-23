@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B14ED8022369B0600C9BBA3 /* Sign Up Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B14ED7F22369B0600C9BBA3 /* Sign Up Screen.storyboard */; };
-		3BE947A822563F2900C0F3EC /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE947A722563F2900C0F3EC /* SignUpScreen.swift */; };
 		3BEE48C3225A98DF00549CD6 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE48C2225A98DF00549CD6 /* Feed.swift */; };
 		3BEE48C5225A99A600549CD6 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEE48C4225A99A600549CD6 /* Feed.storyboard */; };
 		3BEE48C7225AAE7600549CD6 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE48C6225AAE7600549CD6 /* FeedViewController.swift */; };
@@ -22,6 +20,7 @@
 		A4749D1D225A8621004F40FF /* UploadPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4749D1C225A8621004F40FF /* UploadPage.storyboard */; };
 		A4749D20225A99FB004F40FF /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4749D1F225A99FB004F40FF /* Settings.swift */; };
 		A4749D22225A9A43004F40FF /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4749D21225A9A43004F40FF /* Settings.storyboard */; };
+		A4B613BC226E1F4500EF6343 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B613BB226E1F4500EF6343 /* SignupViewController.swift */; };
 		B83131F4ACC9DC686177988C /* Pods_Pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ACAC30949E5F4483CAC40BB /* Pods_Pop.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,8 +43,6 @@
 
 /* Begin PBXFileReference section */
 		26075560F4AF914551721A77 /* Pods-Pop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pop.debug.xcconfig"; path = "Target Support Files/Pods-Pop/Pods-Pop.debug.xcconfig"; sourceTree = "<group>"; };
-		3B14ED7F22369B0600C9BBA3 /* Sign Up Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Sign Up Screen.storyboard"; sourceTree = "<group>"; };
-		3BE947A722563F2900C0F3EC /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
 		3BEE48C2225A98DF00549CD6 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		3BEE48C4225A99A600549CD6 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		3BEE48C6225AAE7600549CD6 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +61,7 @@
 		A4749D1C225A8621004F40FF /* UploadPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UploadPage.storyboard; sourceTree = "<group>"; };
 		A4749D1F225A99FB004F40FF /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		A4749D21225A9A43004F40FF /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		A4B613BB226E1F4500EF6343 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		D8AE9EC51CCA044C9D7E0EC4 /* Pods-Pop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pop.release.xcconfig"; path = "Target Support Files/Pods-Pop/Pods-Pop.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,8 +104,7 @@
 		3BEEB82D224D036A005EB920 /* SignUpScreen */ = {
 			isa = PBXGroup;
 			children = (
-				3B14ED7F22369B0600C9BBA3 /* Sign Up Screen.storyboard */,
-				3BE947A722563F2900C0F3EC /* SignUpScreen.swift */,
+				A4B613BB226E1F4500EF6343 /* SignupViewController.swift */,
 			);
 			path = SignUpScreen;
 			sourceTree = "<group>";
@@ -303,7 +300,6 @@
 				A4394240222330F300FFD820 /* LaunchScreen.storyboard in Resources */,
 				A43942642223337000FFD820 /* GoogleService-Info.plist in Resources */,
 				3BEE48C5225A99A600549CD6 /* Feed.storyboard in Resources */,
-				3B14ED8022369B0600C9BBA3 /* Sign Up Screen.storyboard in Resources */,
 				A439423D222330F300FFD820 /* Assets.xcassets in Resources */,
 				A4749D22225A9A43004F40FF /* Settings.storyboard in Resources */,
 				A439423B222330F200FFD820 /* Main.storyboard in Resources */,
@@ -449,9 +445,9 @@
 			files = (
 				A4749D1B225A8601004F40FF /* Upload.swift in Sources */,
 				A4394238222330F200FFD820 /* ViewController.swift in Sources */,
+				A4B613BC226E1F4500EF6343 /* SignupViewController.swift in Sources */,
 				3BEE48C3225A98DF00549CD6 /* Feed.swift in Sources */,
 				A4394236222330F200FFD820 /* AppDelegate.swift in Sources */,
-				3BE947A822563F2900C0F3EC /* SignUpScreen.swift in Sources */,
 				A4749D20225A99FB004F40FF /* Settings.swift in Sources */,
 				3BEE48C7225AAE7600549CD6 /* FeedViewController.swift in Sources */,
 			);
