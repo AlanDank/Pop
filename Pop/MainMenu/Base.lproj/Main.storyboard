@@ -72,7 +72,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Fuu-AC-gy0" kind="show" id="jzy-gQ-Wtp"/>
+                        <segue destination="Fuu-AC-gy0" kind="relationship" relationship="rootViewController" id="tIc-jz-pTe"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TB0-nq-C4Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -139,6 +139,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6lT-Vv-Hbd"/>
                     </view>
+                    <navigationItem key="navigationItem" id="kMn-Ep-TdU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h46-8A-GIM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
