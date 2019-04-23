@@ -55,7 +55,6 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hD0-Zj-cSH"/>
-                                    <segue destination="HC0-Nr-wgj" kind="show" identifier="toFeed" id="a0I-oc-VWY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W23-Bl-UAd">
@@ -68,7 +67,6 @@
                                 </state>
                                 <connections>
                                     <action selector="signupButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yl5-un-bka"/>
-                                    <segue destination="oxa-5B-8lz" kind="show" identifier="toStoryboard" id="4dV-NO-BJk"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAm-E2-8Ip">
@@ -93,6 +91,8 @@
                     <connections>
                         <outlet property="emailBox" destination="Gl8-1z-VxK" id="1JU-YI-ftd"/>
                         <outlet property="passwordBox" destination="jcs-mB-9to" id="0rN-Kx-sCn"/>
+                        <segue destination="HC0-Nr-wgj" kind="show" identifier="toFeed" id="QdJ-hK-YK9"/>
+                        <segue destination="oxa-5B-8lz" kind="show" identifier="toSignUpPage" id="hzf-ne-RUp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

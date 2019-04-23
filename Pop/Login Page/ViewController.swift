@@ -31,24 +31,28 @@ class ViewController: UIViewController {
     
     @IBAction func loginButton(_ sender: Any) {
        
-        if let email = emailBox.text,
-            let password = passwordBox.text{
+        guard let email = emailBox.text else {return}
+        guard let password = passwordBox.text else {return}
         
-            Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
                 if error == nil && user != nil {
                     print ("User Signed In")
+                    self.performSegue(withIdentifier: "toFeed", sender: nil)
+                    if let userID = user?.user.uid {
+                        
+                    }
                 }
                     else {
                     print ("Error Signing In: \(error!.localizedDescription)" )
                     
                    }
                 }
-            }
+        
         }
     
     
     @IBAction func signupButton(_ sender: Any) {
-        self.performSegue(withIdentifier: "toStoryboard", sender: nil)
+        self.performSegue(withIdentifier: "toSignUpPage", sender: nil)
     }
     
     }
