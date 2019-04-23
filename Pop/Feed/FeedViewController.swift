@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class FeedViewController: UIViewController {
 
@@ -15,8 +16,9 @@ class FeedViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    @IBAction func settingButton(_ sender: Any) {
-        self.performSegue(withIdentifier: "toSettings", sender: nil)
+    @IBAction func handleLogout(_ sender:Any) {
+        try! Auth.auth().signOut()
+        self.dismiss(animated: false, completion: nil)
         
     }
 
