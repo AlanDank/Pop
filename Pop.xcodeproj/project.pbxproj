@@ -21,6 +21,7 @@
 		A4749D20225A99FB004F40FF /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4749D1F225A99FB004F40FF /* Settings.swift */; };
 		A4749D22225A9A43004F40FF /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4749D21225A9A43004F40FF /* Settings.storyboard */; };
 		A4B613BC226E1F4500EF6343 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B613BB226E1F4500EF6343 /* SignupViewController.swift */; };
+		A4B613BF226E979500EF6343 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B613BE226E979500EF6343 /* LoginViewController.swift */; };
 		B83131F4ACC9DC686177988C /* Pods_Pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ACAC30949E5F4483CAC40BB /* Pods_Pop.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		A4749D1F225A99FB004F40FF /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		A4749D21225A9A43004F40FF /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		A4B613BB226E1F4500EF6343 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		A4B613BE226E979500EF6343 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D8AE9EC51CCA044C9D7E0EC4 /* Pods-Pop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pop.release.xcconfig"; path = "Target Support Files/Pods-Pop/Pods-Pop.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,13 +111,13 @@
 			path = SignUpScreen;
 			sourceTree = "<group>";
 		};
-		3BEEB82E224D03D2005EB920 /* Login Page */ = {
+		3BEEB82E224D03D2005EB920 /* MainMenu */ = {
 			isa = PBXGroup;
 			children = (
 				A4394239222330F200FFD820 /* Main.storyboard */,
 				A4394237222330F200FFD820 /* ViewController.swift */,
 			);
-			path = "Login Page";
+			path = MainMenu;
 			sourceTree = "<group>";
 		};
 		592A029838028F024FADC61F /* Pods */ = {
@@ -153,7 +155,8 @@
 				A4394235222330F200FFD820 /* AppDelegate.swift */,
 				A4749D1E225A99B1004F40FF /* Settings */,
 				3BEE48C1225A978500549CD6 /* Feed */,
-				3BEEB82E224D03D2005EB920 /* Login Page */,
+				A4B613BD226E976500EF6343 /* LoginPage */,
+				3BEEB82E224D03D2005EB920 /* MainMenu */,
 				3BEEB82D224D036A005EB920 /* SignUpScreen */,
 				A4749D19225A8552004F40FF /* Upload Page */,
 				A439423E222330F300FFD820 /* LaunchScreen.storyboard */,
@@ -180,6 +183,14 @@
 				A4749D21225A9A43004F40FF /* Settings.storyboard */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		A4B613BD226E976500EF6343 /* LoginPage */ = {
+			isa = PBXGroup;
+			children = (
+				A4B613BE226E979500EF6343 /* LoginViewController.swift */,
+			);
+			path = LoginPage;
 			sourceTree = "<group>";
 		};
 		ED544F76B269FEE527CBF140 /* Frameworks */ = {
@@ -448,6 +459,7 @@
 				A4B613BC226E1F4500EF6343 /* SignupViewController.swift in Sources */,
 				3BEE48C3225A98DF00549CD6 /* Feed.swift in Sources */,
 				A4394236222330F200FFD820 /* AppDelegate.swift in Sources */,
+				A4B613BF226E979500EF6343 /* LoginViewController.swift in Sources */,
 				A4749D20225A99FB004F40FF /* Settings.swift in Sources */,
 				3BEE48C7225AAE7600549CD6 /* FeedViewController.swift in Sources */,
 			);
