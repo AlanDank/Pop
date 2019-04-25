@@ -23,11 +23,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         signupButton.layer.cornerRadius = 20
-        signupButton.layer.borderWidth = 1
-        signupButton.layer.borderColor = UIColor.black.cgColor
+        //signupButton.layer.borderWidth = 1
+        //signupButton.layer.borderColor = UIColor.black.cgColor
         loginButton.layer.cornerRadius = 20
-        loginButton.layer.borderWidth = 1
-        loginButton.layer.borderColor = UIColor.black.cgColor
+        //loginButton.layer.borderWidth = 1
+        //loginButton.layer.borderColor = UIColor.black.cgColor
         Label.layer.borderColor = UIColor.black.cgColor
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
     }
