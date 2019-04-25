@@ -19,6 +19,7 @@
 		A4749D1D225A8621004F40FF /* UploadPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4749D1C225A8621004F40FF /* UploadPage.storyboard */; };
 		A4749D20225A99FB004F40FF /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4749D1F225A99FB004F40FF /* Settings.swift */; };
 		A4749D22225A9A43004F40FF /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4749D21225A9A43004F40FF /* Settings.storyboard */; };
+		A498D03922721C3200116EE9 /* UIBackgroundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A498D03822721C3200116EE9 /* UIBackgroundController.swift */; };
 		A4B613BC226E1F4500EF6343 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B613BB226E1F4500EF6343 /* SignupViewController.swift */; };
 		A4B613BF226E979500EF6343 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B613BE226E979500EF6343 /* LoginViewController.swift */; };
 		B83131F4ACC9DC686177988C /* Pods_Pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ACAC30949E5F4483CAC40BB /* Pods_Pop.framework */; };
@@ -60,6 +61,7 @@
 		A4749D1C225A8621004F40FF /* UploadPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UploadPage.storyboard; sourceTree = "<group>"; };
 		A4749D1F225A99FB004F40FF /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		A4749D21225A9A43004F40FF /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		A498D03822721C3200116EE9 /* UIBackgroundController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBackgroundController.swift; sourceTree = "<group>"; };
 		A4B613BB226E1F4500EF6343 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		A4B613BE226E979500EF6343 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D8AE9EC51CCA044C9D7E0EC4 /* Pods-Pop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pop.release.xcconfig"; path = "Target Support Files/Pods-Pop/Pods-Pop.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 		A4394229222330F200FFD820 = {
 			isa = PBXGroup;
 			children = (
+				A498D03722721C0400116EE9 /* Background */,
 				A4394234222330F200FFD820 /* Pop */,
 				A4394233222330F200FFD820 /* Products */,
 				592A029838028F024FADC61F /* Pods */,
@@ -180,6 +183,14 @@
 				A4749D21225A9A43004F40FF /* Settings.storyboard */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		A498D03722721C0400116EE9 /* Background */ = {
+			isa = PBXGroup;
+			children = (
+				A498D03822721C3200116EE9 /* UIBackgroundController.swift */,
+			);
+			path = Background;
 			sourceTree = "<group>";
 		};
 		A4B613BD226E976500EF6343 /* LoginPage */ = {
@@ -458,6 +469,7 @@
 				A4B613BF226E979500EF6343 /* LoginViewController.swift in Sources */,
 				A4749D20225A99FB004F40FF /* Settings.swift in Sources */,
 				3BEE48C7225AAE7600549CD6 /* FeedViewController.swift in Sources */,
+				A498D03922721C3200116EE9 /* UIBackgroundController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

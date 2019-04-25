@@ -12,10 +12,24 @@ import Firebase
 class ViewController: UIViewController {
 
   
-
+    @IBOutlet weak var signupButton: UIButton!
+   
+    @IBOutlet weak var loginButton: UIButton!
+    
+    @IBOutlet weak var Label: UILabel!
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        signupButton.layer.cornerRadius = 20
+        signupButton.layer.borderWidth = 1
+        signupButton.layer.borderColor = UIColor.black.cgColor
+        loginButton.layer.cornerRadius = 20
+        loginButton.layer.borderWidth = 1
+        loginButton.layer.borderColor = UIColor.black.cgColor
+        Label.layer.borderColor = UIColor.black.cgColor
+        view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
     }
 
     @IBAction func signupButton(_ sender: Any) {
