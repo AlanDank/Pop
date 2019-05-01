@@ -16,15 +16,35 @@ class SignupViewController:UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var dismissButton: UITextField!
+    @IBOutlet weak var continueOutlet: UIButton!
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var tapToChangeButton: UIButton!
+    
     
     var activityView:UIActivityIndicatorView!
+    
+    var imagePicker:UIImagePickerController!
 
 override func viewDidLoad() {
     
     super.viewDidLoad()
-    
-    
+    continueOutlet.layer.cornerRadius = 20
+    continueOutlet.layer.borderWidth = 1
+    continueOutlet.layer.borderColor = UIColor.black.cgColor
 
+    
+    
+    imagePicker = UIImagePickerController()
+    imagePicker.allowsEditing = true
+    imagePicker.sourceType = .photoLibrary
+    imagePicker.delegate = self
+    
+    
+    
+    
+    
+    
+    
     
     }
     
@@ -36,6 +56,10 @@ override func viewDidLoad() {
         self.perform(#selector(handleSignup), with: self)
 
     }
+    @IBAction func tapToChange(_ sender: Any) {
+    }
+    
+    
     
     @objc func handleSignup() {
         
@@ -63,4 +87,11 @@ override func viewDidLoad() {
             }
         }
     }
+}
+
+extension SignupViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    
+    
+    
 }
