@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 
 
-class ViewController: UIViewController {
+class MenuViewController: UIViewController {
 
   
     @IBOutlet weak var signupButton: UIButton!
