@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 self.window?.rootViewController = controller
                 self.window?.makeKeyAndVisible()
             } else {
-                let controller = storyboard.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
+                let controller = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
                 self.window?.rootViewController = controller
                 self.window?.makeKeyAndVisible()
             }

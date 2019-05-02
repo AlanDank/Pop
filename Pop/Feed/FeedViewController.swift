@@ -17,8 +17,7 @@ class FeedViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func handleLogout(_ sender:Any) {
-        try! Auth.auth().signOut()
-        self.dismiss(animated: false, completion: nil)
+        try! Auth.auth().signOut() 
         
     }
 
