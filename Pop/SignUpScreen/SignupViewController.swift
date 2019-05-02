@@ -113,11 +113,25 @@ override func viewDidLoad() {
         
             
             } else {
-                print("Error: \(error!.localizedDescription)")
+               
+                self.resetForm()
+            
+                
             }
         }
     }
-
+    
+    
+    func resetForm(){
+        let alert = UIAlertController(title: "Error signing up", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
+        
+        
+        
+        
+    }
     func uploadProfileImage(_ image:UIImage, completion: @escaping ((_ url:URL?)->())) {
         
         guard let uid = Auth.auth().currentUser?.uid else { return }
