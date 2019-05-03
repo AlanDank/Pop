@@ -7,7 +7,11 @@
 		<key>Pop.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+<<<<<<< HEAD
 			<integer>37</integer>
+=======
+			<integer>13</integer>
+>>>>>>> parent of deb77a4... update
 		</dict>
 	</dict>
 </dict>
