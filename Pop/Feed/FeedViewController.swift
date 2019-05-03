@@ -14,6 +14,13 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var tableview:UITableView!
     
+    var posts = [
+        Post(id:"1", author: "Donald Trump", text: "Bigly"),
+        Post(id:"2", author: "Luke Skywalker", text: "I did not like the last jedi because I did not get to use my awesome jedi powers"),
+        Post(id:"3", author: "Drizzy Drake", text: "Ridin through the 6 with my woes")
+        
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableview = UITableView(frame: view.bounds, style: .plain)
@@ -38,6 +45,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         tableview.delegate = self
         tableview.dataSource = self
+        tableview.tableFooterView = UIView()
         tableview.reloadData()
         
         
@@ -53,11 +61,12 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 12
+        return posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableview.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! PostTableViewCell
+        cell.set(post: posts[indexPath.row])
         return cell
     }
     
