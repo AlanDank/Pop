@@ -152,6 +152,7 @@
                     <view key="view" contentMode="scaleToFill" id="Te9-Sj-oPf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<<<<<<< HEAD
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fuY-8Z-mIa">
                                 <rect key="frame" x="0.0" y="95" width="375" height="44"/>
@@ -167,11 +168,24 @@
                                 </items>
                             </navigationBar>
                         </subviews>
+=======
+>>>>>>> be182852aedcbae24c5171f6b83cfe867fe9f3c5
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6lT-Vv-Hbd"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="8qT-y9-8ip"/>
-                    <navigationItem key="navigationItem" id="kMn-Ep-TdU"/>
+                    <navigationItem key="navigationItem" id="kMn-Ep-TdU">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="fLL-9F-e2V">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HUN-Jd-gku">
+                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="handleLogout:" destination="Fuu-AC-gy0" eventType="touchUpInside" id="xmb-rZ-wJ8"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h46-8A-GIM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -292,6 +306,6 @@
         <image name="ic_account_circle2x.png" width="120" height="120"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Z1x-eR-kje"/>
+        <segue reference="qV7-nY-bO2"/>
     </inferredMetricsTieBreakers>
 </document>
