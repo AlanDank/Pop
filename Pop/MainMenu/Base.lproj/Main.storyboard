@@ -152,8 +152,8 @@
                     <view key="view" contentMode="scaleToFill" id="Te9-Sj-oPf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-<<<<<<< HEAD
-                        <subviews>
+                        <<<<<<< HEAD
+                            <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fuY-8Z-mIa">
                                 <rect key="frame" x="0.0" y="95" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -168,8 +168,8 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-=======
->>>>>>> be182852aedcbae24c5171f6b83cfe867fe9f3c5
+                        =======
+                        >>>>>>> be182852aedcbae24c5171f6b83cfe867fe9f3c5
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6lT-Vv-Hbd"/>
                     </view>
@@ -309,3 +309,4 @@
         <segue reference="qV7-nY-bO2"/>
     </inferredMetricsTieBreakers>
 </document>
+
