@@ -334,13 +334,13 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SYm-2v-KV8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1281" y="138"/>
+            <point key="canvasLocation" x="1423" y="78"/>
         </scene>
     </scenes>
     <resources>
         <image name="ic_account_circle2x.png" width="120" height="120"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qV7-nY-bO2"/>
+        <segue reference="Z1x-eR-kje"/>
     </inferredMetricsTieBreakers>
 </document>
