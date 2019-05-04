@@ -24,7 +24,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         tableview = UITableView(frame: view.bounds, style: .plain)
-        tableview.backgroundColor = UIColor.blue
+        tableview.backgroundColor = UIColor(red: 255/255, green: 122/255, blue: 215/255, alpha: 1)
         let cellNib = UINib(nibName: "PostTableViewCell", bundle: nil)
         tableview.register(cellNib, forCellReuseIdentifier: "postCell")
         view.addSubview(tableview)
