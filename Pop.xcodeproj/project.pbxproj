@@ -23,6 +23,8 @@
 		A4749D20225A99FB004F40FF /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4749D1F225A99FB004F40FF /* Settings.swift */; };
 		A4749D22225A9A43004F40FF /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4749D21225A9A43004F40FF /* Settings.storyboard */; };
 		A4936552227D278300A8B256 /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4936551227D278300A8B256 /* AddPostViewController.swift */; };
+		A4936554227D318300A8B256 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4936553227D318300A8B256 /* UserProfile.swift */; };
+		A4936556227D326400A8B256 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4936555227D326400A8B256 /* UserService.swift */; };
 		A498D03922721C3200116EE9 /* UIBackgroundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A498D03822721C3200116EE9 /* UIBackgroundController.swift */; };
 		A4B613BC226E1F4500EF6343 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B613BB226E1F4500EF6343 /* SignupViewController.swift */; };
 		A4B613BF226E979500EF6343 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B613BE226E979500EF6343 /* LoginViewController.swift */; };
@@ -69,6 +71,8 @@
 		A4749D1F225A99FB004F40FF /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		A4749D21225A9A43004F40FF /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		A4936551227D278300A8B256 /* AddPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
+		A4936553227D318300A8B256 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		A4936555227D326400A8B256 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		A498D03822721C3200116EE9 /* UIBackgroundController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBackgroundController.swift; sourceTree = "<group>"; };
 		A4B613BB226E1F4500EF6343 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		A4B613BE226E979500EF6343 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				3B41EA75227BDCD100CDCC98 /* Post.swift */,
+				A4936553227D318300A8B256 /* UserProfile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 				3B41EA70227BA36E00CDCC98 /* PostTableViewCell.swift */,
 				3B41EA71227BA36E00CDCC98 /* PostTableViewCell.xib */,
 				A4936551227D278300A8B256 /* AddPostViewController.swift */,
+				A4936555227D326400A8B256 /* UserService.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -482,6 +488,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4936556227D326400A8B256 /* UserService.swift in Sources */,
 				A4749D1B225A8601004F40FF /* Upload.swift in Sources */,
 				3B41EA76227BDCD100CDCC98 /* Post.swift in Sources */,
 				A4394238222330F200FFD820 /* ViewController.swift in Sources */,
@@ -494,6 +501,7 @@
 				3B41EA72227BA36E00CDCC98 /* PostTableViewCell.swift in Sources */,
 				3BEE48C7225AAE7600549CD6 /* FeedViewController.swift in Sources */,
 				A498D03922721C3200116EE9 /* UIBackgroundController.swift in Sources */,
+				A4936554227D318300A8B256 /* UserProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

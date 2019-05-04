@@ -180,29 +180,54 @@
             </objects>
             <point key="canvasLocation" x="3344.8000000000002" y="77.811094452773617"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Post View Controller-->
         <scene sceneID="LPH-Lg-7zn">
             <objects>
-                <viewController id="aMz-td-NbT" sceneMemberID="viewController">
+                <viewController id="aMz-td-NbT" customClass="AddPostViewController" customModule="Pop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j3c-Bv-Bhc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xle-B6-PX3">
-                                <rect key="frame" x="289" y="56" width="70" height="32"/>
+                                <rect key="frame" x="273" y="56" width="86" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.3253534703" blue="0.74750144910000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
                                 <state key="normal" title="Post">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="handlePostButton" destination="aMz-td-NbT" eventType="touchUpInside" id="xe9-vZ-eQc"/>
+                                    <action selector="postAction:" destination="dix-M3-0vF" eventType="touchUpInside" id="KFt-bm-2aZ"/>
+                                </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pys-9O-rW1">
+                                <rect key="frame" x="15" y="62" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelPost:" destination="aMz-td-NbT" eventType="touchUpInside" id="1uu-2z-XZt"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Type Here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NnN-AK-rR0">
+                                <rect key="frame" x="28" y="128" width="300" height="324"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="tSy-7Y-nEt"/>
                     </view>
+                    <connections>
+                        <outlet property="postButton" destination="xle-B6-PX3" id="S9D-Sq-lfj"/>
+                        <outlet property="textView" destination="NnN-AK-rR0" id="efl-nO-JdC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vwM-DP-NHz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="dix-M3-0vF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4428" y="77.811094452773617"/>
         </scene>

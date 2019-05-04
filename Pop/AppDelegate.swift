@@ -30,10 +30,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             
             if user != nil {
+                
+                UserService.observeUserProfile(user!.uid) { userProfile in
+                    UserService.currentUserProfile = userProfile
+                }
+                
                 let controller = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
                 self.window?.rootViewController = controller
                 self.window?.makeKeyAndVisible()
             } else {
+                
+                UserService.currentUserProfile = nil
+                
+                
+                
                 let controller = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
                 self.window?.rootViewController = controller
                 self.window?.makeKeyAndVisible()

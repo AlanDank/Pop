@@ -12,7 +12,8 @@ import Firebase
 
 
 class AddPostViewController: UIViewController, UITextViewDelegate {
-
+    
+    @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var postButton: UIButton!
 
     override func viewDidLoad() {
@@ -26,5 +27,42 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
         //loginButton.layer.borderWidth = 1
         //loginButton.layer.borderColor = UIColor.black.cgColor
      
+    }
+
+    @IBAction func cancelPost(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func handlePostButton() {
+        
+        guard let userProfile = UserService.currentUserProfile else { return }
+        
+        
+        
+        let postRef = Database.database().reference().child("posts").childByAutoId()
+        
+        let postObject = [
+            "author": [
+                "uid": userProfile.uid,
+                "username": userProfile.username,
+                "photoURL": userProfile.photoURL.absoluteString
+                
+            ],
+            "text": textView.text,
+            "timestamp": [".sv":"timestamp"]
+        
+        ] as [String:Any]
+        
+        postRef.setValue(postObject, withCompletionBlock: { error, ref in
+            if error == nil {
+                self.dismiss(animated: true, completion: nil)
+            } else {
+                //handle the error
+            }
+        })
+        
+        
+        
     }
 }
