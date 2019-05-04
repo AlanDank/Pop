@@ -157,15 +157,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="8qT-y9-8ip"/>
                     <navigationItem key="navigationItem" id="kMn-Ep-TdU">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="fLL-9F-e2V">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HUN-Jd-gku">
-                                <rect key="frame" x="16" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Log Out"/>
-                                <connections>
-                                    <action selector="handleLogout:" destination="Fuu-AC-gy0" eventType="touchUpInside" id="xmb-rZ-wJ8"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="dsl-rc-x7O">
+                            <connections>
+                                <action selector="handleLogout:" destination="Fuu-AC-gy0" id="SNy-eN-sjG"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="sCT-0X-y5v">
                             <connections>
