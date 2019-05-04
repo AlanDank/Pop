@@ -25,6 +25,7 @@
 		A4936552227D278300A8B256 /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4936551227D278300A8B256 /* AddPostViewController.swift */; };
 		A4936554227D318300A8B256 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4936553227D318300A8B256 /* UserProfile.swift */; };
 		A4936556227D326400A8B256 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4936555227D326400A8B256 /* UserService.swift */; };
+		A493655B227D43FF00A8B256 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A493655A227D43FF00A8B256 /* ImageService.swift */; };
 		A498D03922721C3200116EE9 /* UIBackgroundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A498D03822721C3200116EE9 /* UIBackgroundController.swift */; };
 		A4B613BC226E1F4500EF6343 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B613BB226E1F4500EF6343 /* SignupViewController.swift */; };
 		A4B613BF226E979500EF6343 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B613BE226E979500EF6343 /* LoginViewController.swift */; };
@@ -73,6 +74,7 @@
 		A4936551227D278300A8B256 /* AddPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
 		A4936553227D318300A8B256 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		A4936555227D326400A8B256 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		A493655A227D43FF00A8B256 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		A498D03822721C3200116EE9 /* UIBackgroundController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBackgroundController.swift; sourceTree = "<group>"; };
 		A4B613BB226E1F4500EF6343 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		A4B613BE226E979500EF6343 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -117,13 +119,11 @@
 		3BEE48C1225A978500549CD6 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				3B41EA74227BDCAC00CDCC98 /* Models */,
 				3BEE48C2225A98DF00549CD6 /* Feed.swift */,
 				3BEE48C6225AAE7600549CD6 /* FeedViewController.swift */,
 				3B41EA70227BA36E00CDCC98 /* PostTableViewCell.swift */,
 				3B41EA71227BA36E00CDCC98 /* PostTableViewCell.xib */,
 				A4936551227D278300A8B256 /* AddPostViewController.swift */,
-				A4936555227D326400A8B256 /* UserService.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -157,7 +157,6 @@
 		A4394229222330F200FFD820 = {
 			isa = PBXGroup;
 			children = (
-				A498D03722721C0400116EE9 /* Background */,
 				A4394234222330F200FFD820 /* Pop */,
 				A4394233222330F200FFD820 /* Products */,
 				592A029838028F024FADC61F /* Pods */,
@@ -178,8 +177,11 @@
 		A4394234222330F200FFD820 /* Pop */ = {
 			isa = PBXGroup;
 			children = (
+				A4936559227D43C800A8B256 /* Services */,
 				A4394235222330F200FFD820 /* AppDelegate.swift */,
+				A498D03722721C0400116EE9 /* Background */,
 				A4749D1E225A99B1004F40FF /* Settings */,
+				3B41EA74227BDCAC00CDCC98 /* Models */,
 				3BEE48C1225A978500549CD6 /* Feed */,
 				A4B613BD226E976500EF6343 /* LoginPage */,
 				3BEEB82E224D03D2005EB920 /* MainMenu */,
@@ -209,6 +211,15 @@
 				A4749D21225A9A43004F40FF /* Settings.storyboard */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		A4936559227D43C800A8B256 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A4936555227D326400A8B256 /* UserService.swift */,
+				A493655A227D43FF00A8B256 /* ImageService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		A498D03722721C0400116EE9 /* Background */ = {
@@ -496,6 +507,7 @@
 				A4936552227D278300A8B256 /* AddPostViewController.swift in Sources */,
 				3BEE48C3225A98DF00549CD6 /* Feed.swift in Sources */,
 				A4394236222330F200FFD820 /* AppDelegate.swift in Sources */,
+				A493655B227D43FF00A8B256 /* ImageService.swift in Sources */,
 				A4B613BF226E979500EF6343 /* LoginViewController.swift in Sources */,
 				A4749D20225A99FB004F40FF /* Settings.swift in Sources */,
 				3B41EA72227BA36E00CDCC98 /* PostTableViewCell.swift in Sources */,
