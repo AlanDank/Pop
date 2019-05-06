@@ -10,6 +10,7 @@
 		3B41EA72227BA36E00CDCC98 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B41EA70227BA36E00CDCC98 /* PostTableViewCell.swift */; };
 		3B41EA73227BA36E00CDCC98 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B41EA71227BA36E00CDCC98 /* PostTableViewCell.xib */; };
 		3B41EA76227BDCD100CDCC98 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B41EA75227BDCD100CDCC98 /* Post.swift */; };
+		3BE69D47227F9DC100ED33D9 /* SeeNewPostsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE69D46227F9DC100ED33D9 /* SeeNewPostsButton.swift */; };
 		3BEE48C7225AAE7600549CD6 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE48C6225AAE7600549CD6 /* FeedViewController.swift */; };
 		A4394236222330F200FFD820 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4394235222330F200FFD820 /* AppDelegate.swift */; };
 		A4394238222330F200FFD820 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4394237222330F200FFD820 /* ViewController.swift */; };
@@ -54,6 +55,7 @@
 		3B41EA70227BA36E00CDCC98 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		3B41EA71227BA36E00CDCC98 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		3B41EA75227BDCD100CDCC98 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		3BE69D46227F9DC100ED33D9 /* SeeNewPostsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeNewPostsButton.swift; sourceTree = "<group>"; };
 		3BEE48C6225AAE7600549CD6 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		8ACAC30949E5F4483CAC40BB /* Pods_Pop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4394232222330F200FFD820 /* Pop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pop.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +126,7 @@
 				3B41EA71227BA36E00CDCC98 /* PostTableViewCell.xib */,
 				A4936551227D278300A8B256 /* AddPostViewController.swift */,
 				A493655C227D5E2100A8B256 /* LoadingCell.swift */,
+				3BE69D46227F9DC100ED33D9 /* SeeNewPostsButton.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -513,6 +516,7 @@
 				3B41EA72227BA36E00CDCC98 /* PostTableViewCell.swift in Sources */,
 				3BEE48C7225AAE7600549CD6 /* FeedViewController.swift in Sources */,
 				A498D03922721C3200116EE9 /* UIBackgroundController.swift in Sources */,
+				3BE69D47227F9DC100ED33D9 /* SeeNewPostsButton.swift in Sources */,
 				A4936554227D318300A8B256 /* UserProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

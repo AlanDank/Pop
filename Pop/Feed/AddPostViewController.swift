@@ -10,12 +10,17 @@ import Foundation
 import UIKit
 import Firebase
 
+protocol AddPostVCDelegate {
+    func didUploadPost(withID id:String)
+}
 
 class AddPostViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var postButton: UIButton!
 
+    var delegate:AddPostVCDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -56,6 +61,7 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
         
         postRef.setValue(postObject, withCompletionBlock: { error, ref in
             if error == nil {
+                self.delegate?.didUploadPost(withID: ref.key ?? <#default value#>)
                 self.dismiss(animated: true, completion: nil)
             } else {
                 //handle the error

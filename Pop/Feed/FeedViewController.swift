@@ -13,14 +13,48 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     var tableview:UITableView!
+    var cellHeights: [IndexPath: CGFloat] = [:]
   
     var posts = [Post]()
     var fetchingMore = false
     var endReached = false
     let leadingScreensForBatching:CGFloat = 2.0
     
-    var cellHeights: [IndexPath: CGFloat] = [:]
+    var refreshControl:UIRefreshControl!
     
+    var seeNewPostsButton:SeeNewPostsButton!
+    var seeNewPostsButtonTopAnchor:NSLayoutConstraint!
+    
+    var lastUploadedPostID:String?
+    
+    var postsRef:DatabaseReference {
+        return Database.database().reference().child("posts")
+    }
+    
+    var oldPostsQuery:DatabaseQuery {
+        var queryRef:DatabaseQuery
+        let lastPost = posts.last
+        if lastPost != nil {
+            let lastTimestamp = lastPost!.createdAt.timeIntervalSince1970 * 1000
+            queryRef = postsRef.queryOrdered(byChild: "timestamp").queryEnding(atValue: lastTimestamp)
+        } else {
+            queryRef = postsRef.queryOrdered(byChild: "timestamp")
+        }
+        return queryRef
+    }
+    
+    var newPostsQuery:DatabaseQuery {
+        var queryRef:DatabaseQuery
+        let firstPost = posts.first
+        if firstPost != nil {
+            let firstTimestamp = firstPost!.createdAt.timeIntervalSince1970 * 1000
+            queryRef = postsRef.queryOrdered(byChild: "timestamp").queryStarting(atValue: firstTimestamp)
+        } else {
+            queryRef = postsRef.queryOrdered(byChild: "timestamp")
+        }
+        return queryRef
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableview = UITableView(frame: view.bounds, style: .plain)
@@ -50,48 +84,112 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableview.tableFooterView = UIView()
         tableview.reloadData()
         
+        refreshControl = UIRefreshControl()
+        if #available(iOS 10.0, *) {
+            tableview.refreshControl = refreshControl
+        } else {
+            // Fallback on earlier versions
+            tableview.addSubview(refreshControl)
+        }
+        refreshControl.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
+        
+        seeNewPostsButton = SeeNewPostsButton()
+        view.addSubview(seeNewPostsButton)
+        seeNewPostsButton.translatesAutoresizingMaskIntoConstraints = false
+        seeNewPostsButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        seeNewPostsButtonTopAnchor = seeNewPostsButton.topAnchor.constraint(equalTo: layoutGuide.topAnchor, constant: -44)
+        seeNewPostsButtonTopAnchor.isActive = true
+        seeNewPostsButton.heightAnchor.constraint(equalToConstant: 32.0).isActive = true
+        seeNewPostsButton.widthAnchor.constraint(equalToConstant: seeNewPostsButton.button.bounds.width).isActive = true
+        
+        seeNewPostsButton.button.addTarget(self, action: #selector(handleRefresh), for: .touchUpInside)
+        
         beginBatchFetch()
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        listenForNewPosts()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        stopListeningForNewPosts()
+    }
+    
+    func toggleSeeNewPostsButton(hidden:Bool) {
+        if hidden {
+            // hide it
+            
+            UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseOut, animations: {
+                self.seeNewPostsButtonTopAnchor.constant = -44.0
+                self.view.layoutIfNeeded()
+            }, completion: nil)
+        } else {
+            // show it
+            UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseOut, animations: {
+                self.seeNewPostsButtonTopAnchor.constant = 12
+                self.view.layoutIfNeeded()
+            }, completion: nil)
+        }
+    }
+    
+    @objc func handleRefresh() {
+        print("Refresh!")
+        
+        toggleSeeNewPostsButton(hidden: true)
+        
+        newPostsQuery.queryLimited(toFirst: 20).observeSingleEvent(of: .value, with: { snapshot in
+            var tempPosts = [Post]()
+            
+            let firstPost = self.posts.first
+            for child in snapshot.children {
+                if let childSnapshot = child as? DataSnapshot,
+                    let data = childSnapshot.value as? [String:Any],
+                    let post = Post.parse(childSnapshot.key, data),
+                    childSnapshot.key != firstPost?.id {
+                    
+                    tempPosts.insert(post, at: 0)
+                }
+            }
+            
+            self.posts.insert(contentsOf: tempPosts, at: 0)
+            
+            let newIndexPaths = (0..<tempPosts.count).map { i in
+                return IndexPath(row: i, section: 0)
+            }
+            
+            self.refreshControl.endRefreshing()
+            self.tableview.insertRows(at: newIndexPaths, with: .top)
+            self.tableview.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+            
+            self.listenForNewPosts()
+            
+        })
+    }
+    
+    
     func fetchPosts(completion: @escaping(_ posts:[Post])->()) {
         
-        let postsRef = Database.database().reference().child("posts")
-        var queryRef:DatabaseQuery
-        let lastPost = self.posts.last
-
-        if lastPost == nil {
-            queryRef = postsRef.queryOrdered(byChild: "timestamp").queryLimited(toLast: 20)
-        } else {
-            let lastTimestamp = lastPost!.createdAt.timeIntervalSince1970 * 1000
-            queryRef = postsRef.queryOrdered(byChild: "timestamp").queryEnding(atValue: lastTimestamp).queryLimited(toLast: 20)
-            
-        }
   
-        queryRef.observeSingleEvent(of: .value, with:  { snapshot in
+        oldPostsQuery.queryLimited(toLast: 20).observeSingleEvent(of: .value, with:  { snapshot in
             
             var tempPosts = [Post]()
             
+            let lastPost = self.posts.last
             for child in snapshot.children {
                 if let childSnapshot = child as? DataSnapshot,
-                    let dict = childSnapshot.value as? [String:Any],
-                    let author = dict["author"] as? [String:Any],
-                    let uid = author["uid"] as? String,
-                    let username = author["username"] as? String,
-                    let photoURL = author["photoURL"] as? String,
-                    let url = URL(string:photoURL),
-                    let text = dict["text"] as? String,
-                    let timestamp = dict["timestamp"] as? Double {
-                    
-                    if childSnapshot.key != lastPost?.id{
-                        
-                        let userProfile = UserProfile(uid: uid, username: username, photoURL: url)
-                        let post = Post(id: childSnapshot.key, author: userProfile, text: text, timestamp:timestamp)
+                    let data = childSnapshot.value as? [String:Any],
+                    let post = Post.parse(childSnapshot.key, data),
+                    childSnapshot.key != lastPost?.id{
                         tempPosts.insert(post, at: 0)
                     }
                     
                    
-                }
+                
             }
             
             return completion(tempPosts)
@@ -172,8 +270,59 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.endReached = newPosts.count == 0
             UIView.performWithoutAnimation {
                 self.tableview.reloadData()
+                
+                self.listenForNewPosts()
             }
           
         }
     }
+    
+    var postListenerHandle:UInt?
+    
+    func listenForNewPosts() {
+        
+        guard !fetchingMore else { return }
+        
+        // Avoiding duplicate listeners
+        stopListeningForNewPosts()
+        
+        postListenerHandle = newPostsQuery.observe(.childAdded, with: { snapshot in
+            
+            if snapshot.key != self.posts.first?.id,
+                let data = snapshot.value as? [String:Any],
+                let post = Post.parse(snapshot.key, data) {
+                
+                self.stopListeningForNewPosts()
+                
+                if snapshot.key == self.lastUploadedPostID {
+                    self.handleRefresh()
+                    self.lastUploadedPostID = nil
+                } else {
+                    self.toggleSeeNewPostsButton(hidden: false)
+                }
+            }
+        })
+    }
+    
+    func stopListeningForNewPosts(){
+        if let handle = postListenerHandle {
+            newPostsQuery.removeObserver(withHandle: handle)
+            postListenerHandle = nil
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let addPostNavBar = segue.destination as? UINavigationController,
+            let addPostVC = addPostNavBar.viewControllers[0] as? AddPostViewController {
+            
+            addPostVC.delegate = self
+        }
+    }
+}
+
+extension FeedViewController: AddPostVCDelegate{
+    func didUploadPost(withID id: String) {
+        self.lastUploadedPostID = id
+    }
+    
 }
