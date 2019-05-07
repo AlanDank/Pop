@@ -61,13 +61,13 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
         
         postRef.setValue(postObject, withCompletionBlock: { error, ref in
             if error == nil {
-                self.delegate?.didUploadPost(withID: ref.key ?? <#default value#>)
+                self.delegate?.didUploadPost(withID: ref.key!)
                 self.dismiss(animated: true, completion: nil)
             } else {
                 //handle the error
             }
         })
-        
+    
         
         
     }

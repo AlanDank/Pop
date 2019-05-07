@@ -17,6 +17,7 @@ class SignupViewController:UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var dismissButton: UITextField!
     @IBOutlet weak var continueOutlet: UIButton!
+   
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var tapToChangeButton: UIButton!
     
